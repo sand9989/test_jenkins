@@ -6,7 +6,7 @@ pipeline {
     }
 
 tools {
-    mvn 'maven3'
+    maven 'maven3'
 }
 
 options{
@@ -26,7 +26,7 @@ stages {
             git branch: '${branch}', credentialsId: 'git_pass', url: 'https://github.com/sand9989/test_jenkins.git'
         }
     }
-}
+
     stage("maven deploy"){
         when { ${Environment} == "dev"}
         steps{

@@ -17,7 +17,7 @@ options{
 
 parameters{
     string(name: "branch", defaultValue: "main", description: "select the branch")
-    choice(name: "Environment", choice:'dev/ntest/nprod', description: "select the environment")
+    choice(name: "Environment", choice:"dev\ntest\nprod", description: "select the environment")
 }
 
 stages {

@@ -23,7 +23,7 @@ parameters{
 stages {
     stage("pull code"){
         steps {
-            git branch: ${branch_name} credntialsId: 67ca7455-3a0f-4a29-86a8-ee74abc7dc72 url: https://github.com/sand9989/Maven.git 
+            git branch: ${branch_name} credentialsId: 67ca7455-3a0f-4a29-86a8-ee74abc7dc72 url: https://github.com/sand9989/Maven.git 
         }
     }
 }

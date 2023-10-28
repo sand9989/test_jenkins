@@ -23,7 +23,7 @@ parameters{
 stages {
     stage("pull code"){
         steps {
-            git branch: ${branch} credentialsId: '31afab51-8561-4b1d-a8e5-4a6de13e06da' url: 'https://github.com/sand9989/test_jenkins.git'
+            git branch: ${branch} credentialsId: 'git_pass' url: 'https://github.com/sand9989/test_jenkins.git'
         }
     }
 }

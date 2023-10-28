@@ -28,7 +28,7 @@ stages {
     }
 
     stage("maven deploy"){
-        when { ${params.Environment} == "dev"}
+        // when { ${params.Environment} == "dev"}
         steps{
             sh "mvn clean deploy -Dmaven.test.skip=true"
         }

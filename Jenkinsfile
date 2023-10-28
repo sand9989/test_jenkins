@@ -23,12 +23,12 @@ parameters{
 stages {
     stage("pull code"){
         steps {
-            git branch: '${branch}', credentialsId: 'git_pass', url: 'https://github.com/sand9989/test_jenkins.git'
+            git branch: '${params.branch}', credentialsId: 'git_pass', url: 'https://github.com/sand9989/test_jenkins.git'
         }
     }
 
     stage("maven deploy"){
-        when { ${Environment} == "dev"}
+        when { ${params.Environment} == "dev"}
         steps{
             sh "mvn clean deploy -Dmaven.test.skip=true"
         }
